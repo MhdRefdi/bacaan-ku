@@ -1,0 +1,38 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use Illuminate\Http\Request;
+use App\Http\Requests\{{ model }}\StoreRequest;
+use App\Http\Requests\{{ model }}\UpdateRequest;
+
+class {{ class }}
+{
+    private ${{ model }}Model;
+
+    public function __construct({{ model }} ${{ model }}Model)
+    {
+        $this->{{ model }}Model = ${{ model }}Model;
+    }
+    
+    public function index()
+    {
+    }
+
+    public function store(StoreRequest $request)
+    {
+    }
+
+    public function show({{ model }} ${{ modelVariable }})
+    {
+    }
+
+    public function update(UpdateRequest $request, {{ model }} ${{ modelVariable }})
+    {
+    }
+
+    public function destroy({{ model }} ${{ modelVariable }})
+    {
+    }
+}
