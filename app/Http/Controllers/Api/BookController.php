@@ -122,7 +122,9 @@ class BookController extends Controller
         try {
             // hapus gambar
             $path = storage_path('app/public/image/books/' . $book->image);
-            File::delete($path);
+            if (File::exists($path)) {
+                File::delete($path);
+            }
 
             $data = $book->delete();
             return ApiFormatter::Blueprint(200, 'Success', $data);
